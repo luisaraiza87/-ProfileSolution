@@ -1,7 +1,38 @@
-﻿
+﻿@section Scripts
+{
+    <script type="text/javascript">
+
+        $(function () {
+            debugger;
+            $('#dtSkill').DataTable(
+                {
+                    ajax:
+                        {
+                            url: '/Skill/GetSkills'
+                        }
+                }
+            
+            );
+
+        });
+
+    </script>
+}
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
 
+
+
+
+<table class="display" id="dtSkill" cellspacing="0">
+
+    <thead>
+        <tr>
+            <th>Descripcion</th>
+            <th>Anios</th>
+        </tr>
+    </thead>
+</table>

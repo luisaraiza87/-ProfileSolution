@@ -17,10 +17,11 @@ namespace Profile.Entities
         {
             this.Anios = anios;
             this.Descripcion = descripcion;
-
+         
         }
 
         public string Descripcion { get; set; }
         public string Anios { get; set; }
+     
     }
 }

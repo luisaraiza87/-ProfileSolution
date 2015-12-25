@@ -3,15 +3,29 @@
     <script type="text/javascript">
 
         $(function () {
-            debugger;
+           
             $('#dtSkill').DataTable(
                 {
-                    ajax:
+                    "processing": true,
+
+                    "serverSide": true,
+                    "sAjaxDataProp": "data",
+                    "ajax":
                         {
-                            url: '/Skill/GetSkills'
-                        }
+                            "url": "/Skill/GetSkills"
+
+                        },
+                    "type": "GET",
+                    "columns": [
+
+                   { "data": "Descripcion" },
+
+                    { "data": "Anios" },
+
+
+                    ]
                 }
-            
+
             );
 
         });
@@ -32,7 +46,8 @@
     <thead>
         <tr>
             <th>Descripcion</th>
-            <th>Anios</th>
+            <th>Años</th>
         </tr>
     </thead>
+
 </table>

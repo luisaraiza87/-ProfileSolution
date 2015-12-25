@@ -17,7 +17,7 @@ namespace Profile.Web.Controllers
         }
 
 
-        [HttpPost]
+        [HttpGet]
         public JsonResult GetSkills()
         {
             var listaSkills = new List<SkillDTO>();
@@ -27,7 +27,7 @@ namespace Profile.Web.Controllers
             listaSkills = comp.GetSkills();
 
 
-            return Json(listaSkills);
+            return Json(new { aaData = listaSkills }, JsonRequestBehavior.AllowGet);
         }
     }
 }

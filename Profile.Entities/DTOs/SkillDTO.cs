@@ -13,15 +13,15 @@ namespace Profile.Entities
         {
         }
 
-        public SkillDTO(string descripcion, string anios)
+        public SkillDTO(string description, int years)
         {
-            this.Anios = anios;
-            this.Descripcion = descripcion;
+            this.Description = description;
+            this.Years = years;
          
         }
 
-        public string Descripcion { get; set; }
-        public string Anios { get; set; }
+        public string Description { get; set; }
+        public int? Years { get; set; }
      
     }
 }
